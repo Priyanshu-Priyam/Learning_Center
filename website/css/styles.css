@@ -217,6 +217,17 @@ button {
     color: var(--color-primary-dark);
 }
 
+.btn-secondary-outline {
+    background: transparent;
+    color: var(--color-white);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.btn-secondary-outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--color-white);
+}
+
 .btn-outline {
     background: transparent;
     color: var(--color-primary);
@@ -1008,6 +1019,30 @@ button {
     box-shadow: var(--shadow-md);
 }
 
+.resource-card-featured {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, var(--color-primary-bg) 0%, var(--color-bg-alt) 100%);
+    border: 2px solid var(--color-primary);
+    padding: var(--space-2xl);
+}
+
+.resource-card-featured .resource-icon {
+    font-size: 3.5rem;
+}
+
+.resource-card-featured h3 {
+    font-size: 1.5rem;
+    color: var(--color-primary-dark);
+}
+
+.resource-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    justify-content: center;
+    margin-top: var(--space-lg);
+}
+
 .resource-icon {
     font-size: 2.5rem;
     margin-bottom: var(--space-md);
@@ -1707,6 +1742,18 @@ button {
         flex-direction: column;
         gap: var(--space-sm);
         text-align: center;
+    }
+    
+    .resource-actions {
+        flex-direction: column;
+    }
+    
+    .resource-actions .btn {
+        width: 100%;
+    }
+    
+    .resource-card-featured {
+        padding: var(--space-lg);
     }
 }
 
