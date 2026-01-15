@@ -1,5 +1,5 @@
 /* =====================================================
-   Special Kids Learning Center - Main Stylesheet
+   Bright Horizon Learning Center - Main Stylesheet
    A warm, parent-friendly design for Gorakhpur families
    ===================================================== */
 
@@ -7,35 +7,38 @@
    CSS Variables
    =================== */
 :root {
-    /* Primary Colors - Warm Teal/Sage (calming, growth, hope) */
-    --color-primary: #3D9A8B;
-    --color-primary-light: #5BB5A6;
-    --color-primary-dark: #2D7A6D;
-    --color-primary-bg: #E8F5F3;
+    /* Primary Colors - Sage Green (calming, growth, hope) */
+    --color-primary: #7D9B76;
+    --color-primary-light: #A8C4A0;
+    --color-primary-dark: #5A7D54;
+    --color-primary-bg: #EEF4EC;
     
-    /* Secondary Colors - Soft Coral/Peach (warmth, approachability) */
-    --color-secondary: #E8A598;
-    --color-secondary-light: #F5C4BB;
-    --color-secondary-dark: #D4877A;
+    /* Secondary Colors - Light Sage (warmth, approachability) */
+    --color-secondary: #B8CEB0;
+    --color-secondary-light: #D4E5CE;
+    --color-secondary-dark: #8FB085;
     
-    /* Accent Colors - Golden Yellow (optimism, achievement) */
-    --color-accent: #F4C759;
-    --color-accent-light: #FCE4A8;
-    --color-accent-dark: #D4A73D;
+    /* Accent Colors - Deeper Sage (emphasis, achievement) */
+    --color-accent: #6B8E65;
+    --color-accent-light: #9BB896;
+    --color-accent-dark: #4A6B45;
     
     /* Neutrals */
-    --color-bg: #FFFBF7;
-    --color-bg-alt: #FFF8F2;
+    --color-bg: #FAFCF9;
+    --color-bg-alt: #F5F8F4;
     --color-text: #3D3D3D;
     --color-text-light: #6B6B6B;
     --color-text-lighter: #9A9A9A;
     --color-white: #FFFFFF;
-    --color-border: #E8E4E0;
+    --color-border: #E0E8DD;
     
-    /* Therapy Colors (for mix bars) */
-    --color-speech: #5BB5A6;
-    --color-ot: #E8A598;
-    --color-sped: #F4C759;
+    /* Therapy Colors (for mix bars) - Sage green variants */
+    --color-speech: #7D9B76;
+    --color-ot: #A8C4A0;
+    --color-sped: #B8CEB0;
+    
+    /* Uncertainty/Worry Color (for tagline) */
+    --color-uncertain: #8A8A8A;
     
     /* Typography */
     --font-heading: 'Nunito', sans-serif;
@@ -58,11 +61,11 @@
     --radius-xl: 30px;
     --radius-full: 50%;
     
-    /* Shadows */
-    --shadow-sm: 0 2px 8px rgba(61, 154, 139, 0.08);
-    --shadow-md: 0 4px 16px rgba(61, 154, 139, 0.12);
-    --shadow-lg: 0 8px 32px rgba(61, 154, 139, 0.16);
-    --shadow-xl: 0 16px 48px rgba(61, 154, 139, 0.20);
+    /* Shadows - Updated to sage green tint */
+    --shadow-sm: 0 2px 8px rgba(125, 155, 118, 0.08);
+    --shadow-md: 0 4px 16px rgba(125, 155, 118, 0.12);
+    --shadow-lg: 0 8px 32px rgba(125, 155, 118, 0.16);
+    --shadow-xl: 0 16px 48px rgba(125, 155, 118, 0.20);
     
     /* Transitions */
     --transition-fast: 0.15s ease;
@@ -485,26 +488,33 @@ button {
 }
 
 .hero-title {
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
     margin-bottom: var(--space-lg);
-    line-height: 1.2;
+    line-height: 1.3;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
 }
 
-.hero-title .highlight {
-    color: var(--color-primary);
-    position: relative;
+/* Uncertain tagline - worried parent voice */
+.tagline-uncertain {
+    display: block;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--color-uncertain);
+    letter-spacing: 1px;
+    opacity: 0.85;
 }
 
-.hero-title .highlight::after {
-    content: '';
-    position: absolute;
-    bottom: 5px;
-    left: 0;
-    right: 0;
-    height: 12px;
-    background: var(--color-accent-light);
-    z-index: -1;
-    border-radius: 4px;
+/* Confident tagline - bold, assured response */
+.tagline-confident {
+    display: block;
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    font-weight: 800;
+    color: var(--color-primary-dark);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.1;
 }
 
 .hero-subtitle {
@@ -714,28 +724,28 @@ button {
 
 .chip:hover {
     transform: translateY(-1px);
-    box-shadow: 0 3px 8px rgba(61, 154, 139, 0.3);
+    box-shadow: 0 3px 8px rgba(125, 155, 118, 0.3);
 }
 
+/* All chips use sage green variants for consistent branding */
 .program-card[data-program="little-talkers"] .chip {
-    background: linear-gradient(135deg, #5BB5A6 0%, #3D9A8B 100%);
+    background: linear-gradient(135deg, #7D9B76 0%, #5A7D54 100%);
 }
 
 .program-card[data-program="ready-set-school"] .chip {
-    background: linear-gradient(135deg, #E8A598 0%, #D4877A 100%);
+    background: linear-gradient(135deg, #8BA784 0%, #6B8E65 100%);
 }
 
 .program-card[data-program="focus-champions"] .chip {
-    background: linear-gradient(135deg, #F4C759 0%, #D4A73D 100%);
-    color: var(--color-text);
+    background: linear-gradient(135deg, #6B8E65 0%, #4A6B45 100%);
 }
 
 .program-card[data-program="social-stars"] .chip {
-    background: linear-gradient(135deg, #9B8FD4 0%, #7B6FB4 100%);
+    background: linear-gradient(135deg, #A8C4A0 0%, #7D9B76 100%);
 }
 
 .program-card[data-program="learning-launchpad"] .chip {
-    background: linear-gradient(135deg, #FF8A80 0%, #E57373 100%);
+    background: linear-gradient(135deg, #5A7D54 0%, #3D5A38 100%);
 }
 
 .program-name {
@@ -1735,7 +1745,11 @@ button {
         display: flex;
     }
     
-    .hero-title {
+    .tagline-uncertain {
+        font-size: 1.2rem;
+    }
+    
+    .tagline-confident {
         font-size: 2rem;
     }
     

@@ -1,5 +1,5 @@
 /* =====================================================
-   Special Kids Learning Center - Digital Booklet
+   Bright Horizon Learning Center - Digital Booklet
    Print/PDF Optimized Stylesheet
    ===================================================== */
 
@@ -84,7 +84,7 @@ h1, h2, h3, h4, h5, h6 {
    =================== */
 .page-cover {
     page-break-after: always;
-    background: linear-gradient(135deg, #3D9A8B 0%, #2D7A6D 100%) !important;
+    background: linear-gradient(135deg, #7D9B76 0%, #5A7D54 100%) !important;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
     padding: 40mm 20mm !important;
@@ -129,7 +129,7 @@ h1, h2, h3, h4, h5, h6 {
 .cover-tagline {
     font-size: 12pt;
     font-style: italic;
-    color: #F4C759 !important;
+    color: #6B8E65 !important;
     margin: 20pt 0;
 }
 
@@ -157,7 +157,7 @@ h1, h2, h3, h4, h5, h6 {
    Page Headers
    =================== */
 .page-header {
-    border-bottom: 2pt solid #E8F5F3 !important;
+    border-bottom: 2pt solid #EEF4EC !important;
     padding-bottom: 8pt;
     margin-bottom: 15pt;
 }
@@ -168,7 +168,7 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     width: 24pt;
     height: 24pt;
-    background: #3D9A8B !important;
+    background: #7D9B76 !important;
     color: white !important;
     border-radius: 50%;
     font-size: 10pt;
@@ -177,12 +177,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .page-section {
     font-size: 9pt;
-    color: #3D9A8B !important;
+    color: #7D9B76 !important;
 }
 
 .page-title {
     font-size: 18pt;
-    color: #2D7A6D !important;
+    color: #5A7D54 !important;
     margin-bottom: 12pt;
 }
 
@@ -200,11 +200,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .letter-greeting {
     font-size: 13pt;
-    color: #2D7A6D !important;
+    color: #5A7D54 !important;
 }
 
 .letter-list li::before {
-    color: #3D9A8B !important;
+    color: #7D9B76 !important;
 }
 
 /* ===================
@@ -229,7 +229,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .pillar-card h3 {
     font-size: 11pt;
-    color: #2D7A6D !important;
+    color: #5A7D54 !important;
     margin: 5pt 0;
 }
 
@@ -252,7 +252,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .comparison-table th {
-    background: #E8F5F3 !important;
+    background: #EEF4EC !important;
 }
 
 .serve-grid {
@@ -273,7 +273,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     gap: 12pt;
-    border-bottom: 2pt solid #E8F5F3 !important;
+    border-bottom: 2pt solid #EEF4EC !important;
     padding-bottom: 10pt;
     margin-bottom: 12pt;
 }
@@ -290,7 +290,7 @@ h1, h2, h3, h4, h5, h6 {
 .program-tagline {
     font-size: 11pt;
     font-style: italic;
-    color: #3D9A8B !important;
+    color: #7D9B76 !important;
 }
 
 .program-overview-grid {
@@ -303,14 +303,14 @@ h1, h2, h3, h4, h5, h6 {
     flex: 1;
     text-align: center;
     padding: 8pt;
-    background: #E8F5F3 !important;
+    background: #EEF4EC !important;
     border-radius: 6pt;
 }
 
 .overview-box h4 {
     font-size: 8pt;
     text-transform: uppercase;
-    color: #3D9A8B !important;
+    color: #7D9B76 !important;
     margin-bottom: 2pt;
 }
 
@@ -325,7 +325,7 @@ h1, h2, h3, h4, h5, h6 {
 .key-skills h3,
 .six-month-summary h3 {
     font-size: 11pt;
-    color: #2D7A6D !important;
+    color: #5A7D54 !important;
     margin-bottom: 6pt;
 }
 
@@ -345,13 +345,13 @@ h1, h2, h3, h4, h5, h6 {
     content: '•';
     position: absolute;
     left: 0;
-    color: #3D9A8B;
+    color: #7D9B76;
 }
 
 .core-goal p {
     padding: 8pt 10pt;
     background: #FFFBF7 !important;
-    border-left: 3pt solid #3D9A8B !important;
+    border-left: 3pt solid #7D9B76 !important;
     font-size: 11pt;
 }
 
@@ -372,15 +372,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .therapy-segment.speech {
-    background: #5BB5A6 !important;
+    background: #A8C4A0 !important;
 }
 
 .therapy-segment.ot {
-    background: #E8A598 !important;
+    background: #B8CEB0 !important;
 }
 
 .therapy-segment.sped {
-    background: #F4C759 !important;
+    background: #6B8E65 !important;
     color: #333 !important;
 }
 
@@ -406,14 +406,14 @@ h1, h2, h3, h4, h5, h6 {
 .month-block {
     flex: 1;
     padding: 8pt;
-    background: #E8F5F3 !important;
+    background: #EEF4EC !important;
     border-radius: 6pt;
     text-align: center;
 }
 
 .month-block strong {
     font-size: 10pt;
-    color: #2D7A6D !important;
+    color: #5A7D54 !important;
 }
 
 .month-block p {
@@ -441,7 +441,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     gap: 8pt;
     padding: 6pt 10pt;
-    background: #3D9A8B !important;
+    background: #7D9B76 !important;
     color: white !important;
 }
 
@@ -469,7 +469,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .week-item strong {
-    color: #2D7A6D !important;
+    color: #5A7D54 !important;
 }
 
 .milestone {
@@ -478,7 +478,7 @@ h1, h2, h3, h4, h5, h6 {
     gap: 6pt;
     margin-top: 6pt;
     padding: 5pt 8pt;
-    background: #FCE4A8 !important;
+    background: #9BB896 !important;
     border-radius: 4pt;
     font-size: 9pt;
 }
@@ -486,7 +486,7 @@ h1, h2, h3, h4, h5, h6 {
 .milestone-icon {
     width: 16pt;
     height: 16pt;
-    background: #F4C759 !important;
+    background: #6B8E65 !important;
     border-radius: 50%;
     display: inline-flex;
     align-items: center;
@@ -512,7 +512,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .schedule-table th {
-    background: #3D9A8B !important;
+    background: #7D9B76 !important;
     color: white !important;
     font-size: 8pt;
 }
@@ -531,14 +531,14 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     padding: 6pt 8pt;
     background: #FFFBF7 !important;
-    border-left: 3pt solid #3D9A8B !important;
+    border-left: 3pt solid #7D9B76 !important;
     font-size: 9pt;
 }
 
 .session-block .time {
     width: 60pt;
     font-weight: 600;
-    color: #3D9A8B !important;
+    color: #7D9B76 !important;
 }
 
 .parent-involvement ul {
@@ -551,7 +551,7 @@ h1, h2, h3, h4, h5, h6 {
    Outcomes Page
    =================== */
 .outcomes-box {
-    background: #E8F5F3 !important;
+    background: #EEF4EC !important;
     padding: 12pt;
     border-radius: 8pt;
     margin-bottom: 12pt;
@@ -574,7 +574,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .outcome-icon {
     font-size: 12pt;
-    color: #3D9A8B !important;
+    color: #7D9B76 !important;
 }
 
 .outcome-item strong {
@@ -602,7 +602,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .next-step-option h4 {
     font-size: 10pt;
-    color: #2D7A6D !important;
+    color: #5A7D54 !important;
 }
 
 .next-step-option p {
@@ -612,7 +612,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .success-snippet {
     padding: 12pt;
-    background: linear-gradient(135deg, #FCE4A8 0%, #FFFBF7 100%) !important;
+    background: linear-gradient(135deg, #9BB896 0%, #FFFBF7 100%) !important;
     border-radius: 6pt;
 }
 
@@ -651,7 +651,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     gap: 6pt;
     padding: 8pt 10pt;
-    background: #E8F5F3 !important;
+    background: #EEF4EC !important;
 }
 
 .addon-icon {
@@ -660,7 +660,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .addon-header h3 {
     font-size: 11pt;
-    color: #2D7A6D !important;
+    color: #5A7D54 !important;
     margin: 0;
 }
 
@@ -690,7 +690,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .pricing-table th {
-    background: #3D9A8B !important;
+    background: #7D9B76 !important;
     color: white !important;
     font-size: 8pt;
 }
@@ -701,11 +701,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .discount {
     font-size: 7pt;
-    color: #3D9A8B !important;
+    color: #7D9B76 !important;
 }
 
 .customization-box {
-    background: #FCE4A8 !important;
+    background: #9BB896 !important;
     padding: 12pt;
     border-radius: 6pt;
 }
@@ -724,7 +724,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .example-package h4 {
     font-size: 9pt;
-    color: #2D7A6D !important;
+    color: #5A7D54 !important;
 }
 
 .example-package p {
@@ -732,7 +732,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .package-price {
-    color: #3D9A8B !important;
+    color: #7D9B76 !important;
 }
 
 /* ===================
@@ -755,7 +755,7 @@ h1, h2, h3, h4, h5, h6 {
 .step-number-large {
     width: 36pt;
     height: 36pt;
-    background: #3D9A8B !important;
+    background: #7D9B76 !important;
     color: white !important;
     border-radius: 50%;
     display: flex;
@@ -768,7 +768,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .step-content-large h3 {
     font-size: 12pt;
-    color: #2D7A6D !important;
+    color: #5A7D54 !important;
 }
 
 .step-content-large p,
@@ -799,7 +799,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .faq-item-print h4 {
     font-size: 10pt;
-    color: #2D7A6D !important;
+    color: #5A7D54 !important;
     margin-bottom: 4pt;
 }
 
@@ -834,7 +834,7 @@ h1, h2, h3, h4, h5, h6 {
 .cta-large {
     text-align: center;
     padding: 15pt;
-    background: linear-gradient(135deg, #3D9A8B 0%, #2D7A6D 100%) !important;
+    background: linear-gradient(135deg, #7D9B76 0%, #5A7D54 100%) !important;
     border-radius: 8pt;
     color: white !important;
     margin-bottom: 15pt;
@@ -854,7 +854,7 @@ h1, h2, h3, h4, h5, h6 {
 .cta-button {
     padding: 6pt 12pt;
     background: white !important;
-    color: #2D7A6D !important;
+    color: #5A7D54 !important;
     border-radius: 4pt;
     font-weight: 600;
     font-size: 10pt;
@@ -862,14 +862,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .tagline-large {
     font-size: 16pt;
-    color: #3D9A8B !important;
+    color: #7D9B76 !important;
 }
 
 /* ===================
    Back Cover
    =================== */
 .page-back-cover {
-    background: linear-gradient(135deg, #2D7A6D 0%, #3D9A8B 100%) !important;
+    background: linear-gradient(135deg, #5A7D54 0%, #7D9B76 100%) !important;
     padding: 40mm 20mm !important;
     height: 267mm;
     display: flex !important;
@@ -886,7 +886,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .back-programs-list h3 {
-    color: #F4C759 !important;
+    color: #6B8E65 !important;
     font-size: 11pt;
     margin-bottom: 10pt;
 }
@@ -918,7 +918,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-    color: #3D9A8B !important;
+    color: #7D9B76 !important;
     text-decoration: none;
 }
 
