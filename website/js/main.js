@@ -9,59 +9,15 @@
     // ===================
     // DOM Elements
     // ===================
-    const landing = document.getElementById('landing');
-    const mainContent = document.getElementById('mainContent');
-    const scrollIndicator = document.getElementById('scrollIndicator');
-    const mobileNav = document.getElementById('mobileNav');
     const navbar = document.getElementById('navbar');
     const navToggle = document.getElementById('navToggle');
     const navMenu = document.getElementById('navMenu');
     const navLinks = document.querySelectorAll('.nav-link');
-    const mobileNavLinks = document.querySelectorAll('.mobile-nav-item');
     const faqItems = document.querySelectorAll('.faq-item');
     const programButtons = document.querySelectorAll('.program-details-btn');
     const modals = document.querySelectorAll('.modal');
     const modalCloses = document.querySelectorAll('.modal-close');
     const modalOverlays = document.querySelectorAll('.modal-overlay');
-
-    // ===================
-    // Landing Page Scroll
-    // ===================
-    let hasScrolledPastLanding = false;
-
-    function handleLandingScroll() {
-        if (!landing) return;
-        
-        const scrollY = window.scrollY;
-        const landingHeight = landing.offsetHeight;
-        
-        // Add scrolled class to landing when user starts scrolling
-        if (scrollY > 50) {
-            landing.classList.add('scrolled');
-        } else {
-            landing.classList.remove('scrolled');
-        }
-        
-        // Track if user has scrolled past landing
-        if (scrollY > landingHeight * 0.5) {
-            hasScrolledPastLanding = true;
-            document.body.classList.add('past-landing');
-        } else {
-            hasScrolledPastLanding = false;
-            document.body.classList.remove('past-landing');
-        }
-    }
-
-    function scrollToMain() {
-        if (mainContent) {
-            mainContent.scrollIntoView({ behavior: 'smooth' });
-        }
-    }
-
-    // Click on scroll indicator to scroll down
-    function handleScrollIndicatorClick() {
-        scrollToMain();
-    }
 
     // ===================
     // Navigation
@@ -212,7 +168,7 @@
         });
 
         // Add stagger animation to grids
-        const grids = document.querySelectorAll('.programs-grid, .pillars, .team-grid, .testimonials-grid, .resources-grid');
+        const grids = document.querySelectorAll('.bento-grid, .pillars, .team-grid, .testimonials-grid, .resources-grid');
         grids.forEach(grid => {
             grid.classList.add('stagger-children');
         });
@@ -371,42 +327,11 @@
     // Initialize
     // ===================
 
-    // ===================
-    // Mobile Navigation
-    // ===================
-    
-    function handleMobileNavClick(e) {
-        const href = this.getAttribute('href');
-        if (href && href.startsWith('#')) {
-            e.preventDefault();
-            smoothScrollTo(href);
-        }
-    }
-
-    function showMobileNav() {
-        if (mobileNav && hasScrolledPastLanding) {
-            mobileNav.classList.add('visible');
-        }
-    }
-
-    function hideMobileNav() {
-        if (mobileNav && !hasScrolledPastLanding) {
-            mobileNav.classList.remove('visible');
-        }
-    }
 
     function init() {
-        // Event Listeners - Landing Page
-        window.addEventListener('scroll', throttle(handleLandingScroll, 50));
-        
-        if (scrollIndicator) {
-            scrollIndicator.addEventListener('click', handleScrollIndicatorClick);
-        }
-
         // Event Listeners - Navigation
         window.addEventListener('scroll', throttle(handleNavbarScroll, 100));
         window.addEventListener('scroll', throttle(highlightActiveNavLink, 100));
-        window.addEventListener('scroll', throttle(showMobileNav, 100));
         
         if (navToggle) {
             navToggle.addEventListener('click', toggleMobileMenu);
@@ -414,11 +339,6 @@
 
         navLinks.forEach(link => {
             link.addEventListener('click', handleNavLinkClick);
-        });
-
-        // Mobile bottom nav links
-        mobileNavLinks.forEach(link => {
-            link.addEventListener('click', handleMobileNavClick);
         });
 
         // Event Listeners - FAQ
@@ -459,9 +379,6 @@
         // Hide preloader if exists
         hidePreloader();
 
-        // Initial landing scroll check
-        handleLandingScroll();
-
         console.log('Bright Horizon Learning Center website initialized successfully!');
     }
 
@@ -480,7 +397,6 @@
         openModal: openModal,
         closeAllModals: closeAllModals,
         smoothScrollTo: smoothScrollTo,
-        scrollToMain: scrollToMain,
         trackEvent: trackEvent
     };
 
