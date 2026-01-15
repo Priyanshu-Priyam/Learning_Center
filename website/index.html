@@ -15,7 +15,36 @@
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="scroll-container">
+    <!-- Landing/Splash Page -->
+    <section class="landing" id="landing">
+        <div class="landing-bg">
+            <div class="landing-orb landing-orb-1"></div>
+            <div class="landing-orb landing-orb-2"></div>
+            <div class="landing-orb landing-orb-3"></div>
+        </div>
+        <div class="landing-content">
+            <div class="landing-card">
+                <h1 class="landing-title">
+                    <span class="landing-title-main">Bright Horizon</span>
+                    <span class="landing-title-sub">Learning Center</span>
+                </h1>
+                <p class="landing-location">Gorakhpur</p>
+            </div>
+        </div>
+        <div class="scroll-indicator" id="scrollIndicator">
+            <span class="scroll-text">Scroll</span>
+            <div class="scroll-chevron">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Wrapper -->
+    <div class="main-content" id="mainContent">
+    
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
@@ -1076,6 +1105,28 @@
         <span class="whatsapp-icon">💬</span>
         <span class="whatsapp-text">Chat with us</span>
     </a>
+
+    </div><!-- End Main Content Wrapper -->
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="#about" class="mobile-nav-item">
+            <span class="mobile-nav-icon">ℹ️</span>
+            <span class="mobile-nav-label">About</span>
+        </a>
+        <a href="#programs" class="mobile-nav-item">
+            <span class="mobile-nav-icon">📚</span>
+            <span class="mobile-nav-label">Programs</span>
+        </a>
+        <a href="https://wa.me/919999999999" class="mobile-nav-item mobile-nav-cta" target="_blank">
+            <span class="mobile-nav-icon">💬</span>
+            <span class="mobile-nav-label">Chat</span>
+        </a>
+        <a href="#contact" class="mobile-nav-item">
+            <span class="mobile-nav-icon">📍</span>
+            <span class="mobile-nav-label">Contact</span>
+        </a>
+    </nav>
 
     <!-- Scripts -->
     <script src="js/main.js"></script>
