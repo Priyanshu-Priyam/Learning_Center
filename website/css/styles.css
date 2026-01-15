@@ -690,6 +690,54 @@ button {
     font-size: 2rem;
 }
 
+.condition-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-md);
+    padding-top: var(--space-sm);
+}
+
+.chip {
+    display: inline-block;
+    padding: 0.25rem 0.65rem;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: var(--color-white);
+    font-size: 0.7rem;
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    box-shadow: 0 2px 4px rgba(61, 154, 139, 0.2);
+    transition: all var(--transition-fast);
+}
+
+.chip:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(61, 154, 139, 0.3);
+}
+
+.program-card[data-program="little-talkers"] .chip {
+    background: linear-gradient(135deg, #5BB5A6 0%, #3D9A8B 100%);
+}
+
+.program-card[data-program="ready-set-school"] .chip {
+    background: linear-gradient(135deg, #E8A598 0%, #D4877A 100%);
+}
+
+.program-card[data-program="focus-champions"] .chip {
+    background: linear-gradient(135deg, #F4C759 0%, #D4A73D 100%);
+    color: var(--color-text);
+}
+
+.program-card[data-program="social-stars"] .chip {
+    background: linear-gradient(135deg, #9B8FD4 0%, #7B6FB4 100%);
+}
+
+.program-card[data-program="learning-launchpad"] .chip {
+    background: linear-gradient(135deg, #FF8A80 0%, #E57373 100%);
+}
+
 .program-name {
     font-size: 1.25rem;
     margin-bottom: var(--space-xs);
@@ -1754,6 +1802,11 @@ button {
     
     .resource-card-featured {
         padding: var(--space-lg);
+    }
+    
+    .chip {
+        font-size: 0.65rem;
+        padding: 0.2rem 0.5rem;
     }
 }
 
