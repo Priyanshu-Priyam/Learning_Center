@@ -1,0 +1,929 @@
+/* =====================================================
+   Special Kids Learning Center - Digital Booklet
+   Print/PDF Optimized Stylesheet
+   ===================================================== */
+
+/* ===================
+   Print Setup
+   =================== */
+@page {
+    size: A4;
+    margin: 15mm;
+}
+
+@page :first {
+    margin: 0;
+}
+
+/* ===================
+   Base Print Styles
+   =================== */
+* {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    font-size: 11pt;
+    line-height: 1.5;
+    color: #333;
+    background: white !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nunito', 'Arial Rounded MT Bold', sans-serif;
+    page-break-after: avoid;
+}
+
+/* ===================
+   Hide Screen-Only Elements
+   =================== */
+.no-print,
+.nav-controls,
+.toc-toggle,
+.toc {
+    display: none !important;
+}
+
+/* ===================
+   Page Breaks
+   =================== */
+.page {
+    page-break-after: always;
+    page-break-inside: avoid;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    min-height: auto !important;
+    background: white !important;
+}
+
+.page:last-child {
+    page-break-after: auto;
+}
+
+/* Avoid breaks inside these elements */
+.pillar-card,
+.overview-box,
+.addon-card,
+.enrollment-step,
+.faq-item-print,
+.calendar-month,
+.outcome-item,
+.next-step-option {
+    page-break-inside: avoid;
+}
+
+/* ===================
+   Cover Page
+   =================== */
+.page-cover {
+    page-break-after: always;
+    background: linear-gradient(135deg, #3D9A8B 0%, #2D7A6D 100%) !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    padding: 40mm 20mm !important;
+    height: 267mm; /* A4 height minus margins */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.cover-content {
+    text-align: center;
+}
+
+.cover-badge {
+    background: rgba(255, 255, 255, 0.2) !important;
+    padding: 5pt 15pt;
+    border-radius: 20pt;
+    font-size: 9pt;
+    display: inline-block;
+    margin-bottom: 15pt;
+}
+
+.title-line-1 {
+    font-size: 36pt;
+    font-weight: 800;
+    color: white !important;
+}
+
+.title-line-2 {
+    font-size: 16pt;
+    font-weight: 600;
+    color: white !important;
+    opacity: 0.9;
+}
+
+.cover-subtitle {
+    font-size: 14pt;
+    color: white !important;
+    margin-top: 10pt;
+}
+
+.cover-tagline {
+    font-size: 12pt;
+    font-style: italic;
+    color: #F4C759 !important;
+    margin: 20pt 0;
+}
+
+.cover-programs {
+    margin: 20pt 0;
+}
+
+.cover-program-item {
+    display: inline-block;
+    padding: 4pt 10pt;
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-radius: 5pt;
+    font-size: 9pt;
+    color: white !important;
+    margin: 3pt;
+}
+
+.cover-location {
+    font-size: 11pt;
+    color: white !important;
+    opacity: 0.8;
+}
+
+/* ===================
+   Page Headers
+   =================== */
+.page-header {
+    border-bottom: 2pt solid #E8F5F3 !important;
+    padding-bottom: 8pt;
+    margin-bottom: 15pt;
+}
+
+.page-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24pt;
+    height: 24pt;
+    background: #3D9A8B !important;
+    color: white !important;
+    border-radius: 50%;
+    font-size: 10pt;
+    font-weight: 700;
+}
+
+.page-section {
+    font-size: 9pt;
+    color: #3D9A8B !important;
+}
+
+.page-title {
+    font-size: 18pt;
+    color: #2D7A6D !important;
+    margin-bottom: 12pt;
+}
+
+/* ===================
+   Welcome Letter
+   =================== */
+.page-welcome {
+    background: #FFFBF7 !important;
+}
+
+.letter-content {
+    font-size: 11pt;
+    line-height: 1.7;
+}
+
+.letter-greeting {
+    font-size: 13pt;
+    color: #2D7A6D !important;
+}
+
+.letter-list li::before {
+    color: #3D9A8B !important;
+}
+
+/* ===================
+   About Page
+   =================== */
+.pillars-grid {
+    display: flex;
+    gap: 10pt;
+}
+
+.pillar-card {
+    flex: 1;
+    padding: 10pt;
+    background: #FFFBF7 !important;
+    border-radius: 8pt;
+    text-align: center;
+}
+
+.pillar-icon {
+    font-size: 24pt;
+}
+
+.pillar-card h3 {
+    font-size: 11pt;
+    color: #2D7A6D !important;
+    margin: 5pt 0;
+}
+
+.pillar-card p {
+    font-size: 9pt;
+    color: #666;
+}
+
+.comparison-table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 10pt;
+}
+
+.comparison-table th,
+.comparison-table td {
+    border: 1pt solid #E8E4E0;
+    padding: 6pt 8pt;
+    text-align: left;
+}
+
+.comparison-table th {
+    background: #E8F5F3 !important;
+}
+
+.serve-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.serve-item {
+    width: 50%;
+    font-size: 10pt;
+    padding: 3pt 0;
+}
+
+/* ===================
+   Program Pages
+   =================== */
+.program-header {
+    display: flex;
+    align-items: center;
+    gap: 12pt;
+    border-bottom: 2pt solid #E8F5F3 !important;
+    padding-bottom: 10pt;
+    margin-bottom: 12pt;
+}
+
+.program-icon-large {
+    font-size: 36pt;
+}
+
+.program-name {
+    font-size: 20pt;
+    color: #333 !important;
+}
+
+.program-tagline {
+    font-size: 11pt;
+    font-style: italic;
+    color: #3D9A8B !important;
+}
+
+.program-overview-grid {
+    display: flex;
+    gap: 8pt;
+    margin-bottom: 12pt;
+}
+
+.overview-box {
+    flex: 1;
+    text-align: center;
+    padding: 8pt;
+    background: #E8F5F3 !important;
+    border-radius: 6pt;
+}
+
+.overview-box h4 {
+    font-size: 8pt;
+    text-transform: uppercase;
+    color: #3D9A8B !important;
+    margin-bottom: 2pt;
+}
+
+.overview-box p {
+    font-size: 10pt;
+    font-weight: 600;
+}
+
+.program-for h3,
+.core-goal h3,
+.therapy-mix h3,
+.key-skills h3,
+.six-month-summary h3 {
+    font-size: 11pt;
+    color: #2D7A6D !important;
+    margin-bottom: 6pt;
+}
+
+.checklist {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.checklist li {
+    width: 50%;
+    font-size: 10pt;
+    padding: 2pt 0 2pt 12pt;
+    position: relative;
+}
+
+.checklist li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #3D9A8B;
+}
+
+.core-goal p {
+    padding: 8pt 10pt;
+    background: #FFFBF7 !important;
+    border-left: 3pt solid #3D9A8B !important;
+    font-size: 11pt;
+}
+
+.therapy-bar {
+    display: flex;
+    height: 25pt;
+    border-radius: 4pt;
+    overflow: hidden;
+}
+
+.therapy-segment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8pt;
+    font-weight: 600;
+    color: white !important;
+}
+
+.therapy-segment.speech {
+    background: #5BB5A6 !important;
+}
+
+.therapy-segment.ot {
+    background: #E8A598 !important;
+}
+
+.therapy-segment.sped {
+    background: #F4C759 !important;
+    color: #333 !important;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5pt;
+}
+
+.skill-item {
+    width: calc(33.33% - 4pt);
+    padding: 5pt;
+    background: #FFFBF7 !important;
+    border-radius: 4pt;
+    font-size: 9pt;
+}
+
+.month-blocks {
+    display: flex;
+    gap: 8pt;
+}
+
+.month-block {
+    flex: 1;
+    padding: 8pt;
+    background: #E8F5F3 !important;
+    border-radius: 6pt;
+    text-align: center;
+}
+
+.month-block strong {
+    font-size: 10pt;
+    color: #2D7A6D !important;
+}
+
+.month-block p {
+    font-size: 9pt;
+    color: #666;
+}
+
+/* ===================
+   Calendar Page
+   =================== */
+.calendar-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 8pt;
+}
+
+.calendar-month {
+    border: 1pt solid #E8E4E0;
+    border-radius: 6pt;
+    overflow: hidden;
+}
+
+.month-header {
+    display: flex;
+    align-items: center;
+    gap: 8pt;
+    padding: 6pt 10pt;
+    background: #3D9A8B !important;
+    color: white !important;
+}
+
+.month-number {
+    font-size: 9pt;
+    padding: 2pt 6pt;
+    background: rgba(255, 255, 255, 0.2) !important;
+    border-radius: 4pt;
+}
+
+.month-header h3 {
+    font-size: 11pt;
+    color: white !important;
+    margin: 0;
+}
+
+.month-content {
+    padding: 8pt 10pt;
+    background: #FFFBF7 !important;
+}
+
+.week-item {
+    font-size: 9pt;
+    padding: 2pt 0;
+}
+
+.week-item strong {
+    color: #2D7A6D !important;
+}
+
+.milestone {
+    display: flex;
+    align-items: center;
+    gap: 6pt;
+    margin-top: 6pt;
+    padding: 5pt 8pt;
+    background: #FCE4A8 !important;
+    border-radius: 4pt;
+    font-size: 9pt;
+}
+
+.milestone-icon {
+    width: 16pt;
+    height: 16pt;
+    background: #F4C759 !important;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8pt;
+}
+
+/* ===================
+   Schedule Page
+   =================== */
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 9pt;
+    margin-bottom: 12pt;
+}
+
+.schedule-table th,
+.schedule-table td {
+    border: 1pt solid #E8E4E0;
+    padding: 5pt 6pt;
+    text-align: left;
+}
+
+.schedule-table th {
+    background: #3D9A8B !important;
+    color: white !important;
+    font-size: 8pt;
+}
+
+.schedule-table tbody tr:nth-child(even) {
+    background: #FFFBF7 !important;
+}
+
+.session-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 4pt;
+}
+
+.session-block {
+    display: flex;
+    padding: 6pt 8pt;
+    background: #FFFBF7 !important;
+    border-left: 3pt solid #3D9A8B !important;
+    font-size: 9pt;
+}
+
+.session-block .time {
+    width: 60pt;
+    font-weight: 600;
+    color: #3D9A8B !important;
+}
+
+.parent-involvement ul {
+    list-style: disc;
+    padding-left: 15pt;
+    font-size: 10pt;
+}
+
+/* ===================
+   Outcomes Page
+   =================== */
+.outcomes-box {
+    background: #E8F5F3 !important;
+    padding: 12pt;
+    border-radius: 8pt;
+    margin-bottom: 12pt;
+}
+
+.outcomes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8pt;
+}
+
+.outcome-item {
+    width: calc(50% - 4pt);
+    display: flex;
+    gap: 6pt;
+    padding: 6pt;
+    background: white !important;
+    border-radius: 4pt;
+}
+
+.outcome-icon {
+    font-size: 12pt;
+    color: #3D9A8B !important;
+}
+
+.outcome-item strong {
+    font-size: 9pt;
+}
+
+.outcome-item p {
+    font-size: 8pt;
+    color: #666;
+}
+
+.next-steps-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8pt;
+}
+
+.next-step-option {
+    width: calc(50% - 4pt);
+    padding: 8pt;
+    background: #FFFBF7 !important;
+    border: 1pt solid #E8E4E0;
+    border-radius: 6pt;
+}
+
+.next-step-option h4 {
+    font-size: 10pt;
+    color: #2D7A6D !important;
+}
+
+.next-step-option p {
+    font-size: 9pt;
+    color: #666;
+}
+
+.success-snippet {
+    padding: 12pt;
+    background: linear-gradient(135deg, #FCE4A8 0%, #FFFBF7 100%) !important;
+    border-radius: 6pt;
+}
+
+.success-snippet blockquote {
+    font-size: 11pt;
+    font-style: italic;
+}
+
+.success-snippet cite {
+    font-size: 9pt;
+    color: #666;
+}
+
+/* ===================
+   Add-On Services
+   =================== */
+.addon-services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8pt;
+}
+
+.addon-card {
+    width: calc(50% - 4pt);
+    border: 1pt solid #E8E4E0;
+    border-radius: 6pt;
+    overflow: hidden;
+}
+
+.addon-card:last-child {
+    width: 100%;
+}
+
+.addon-header {
+    display: flex;
+    align-items: center;
+    gap: 6pt;
+    padding: 8pt 10pt;
+    background: #E8F5F3 !important;
+}
+
+.addon-icon {
+    font-size: 14pt;
+}
+
+.addon-header h3 {
+    font-size: 11pt;
+    color: #2D7A6D !important;
+    margin: 0;
+}
+
+.addon-content {
+    padding: 8pt 10pt;
+    font-size: 9pt;
+}
+
+.addon-content ul {
+    margin: 4pt 0;
+    padding-left: 12pt;
+}
+
+/* ===================
+   Pricing Table
+   =================== */
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 9pt;
+}
+
+.pricing-table th,
+.pricing-table td {
+    border: 1pt solid #E8E4E0;
+    padding: 5pt 6pt;
+}
+
+.pricing-table th {
+    background: #3D9A8B !important;
+    color: white !important;
+    font-size: 8pt;
+}
+
+.pricing-table tbody tr:nth-child(even) {
+    background: #FFFBF7 !important;
+}
+
+.discount {
+    font-size: 7pt;
+    color: #3D9A8B !important;
+}
+
+.customization-box {
+    background: #FCE4A8 !important;
+    padding: 12pt;
+    border-radius: 6pt;
+}
+
+.example-packages {
+    display: flex;
+    gap: 8pt;
+}
+
+.example-package {
+    flex: 1;
+    padding: 8pt;
+    background: white !important;
+    border-radius: 4pt;
+}
+
+.example-package h4 {
+    font-size: 9pt;
+    color: #2D7A6D !important;
+}
+
+.example-package p {
+    font-size: 8pt;
+}
+
+.package-price {
+    color: #3D9A8B !important;
+}
+
+/* ===================
+   Enrollment Page
+   =================== */
+.enrollment-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 10pt;
+}
+
+.enrollment-step {
+    display: flex;
+    gap: 12pt;
+    padding: 10pt;
+    background: #FFFBF7 !important;
+    border-radius: 6pt;
+}
+
+.step-number-large {
+    width: 36pt;
+    height: 36pt;
+    background: #3D9A8B !important;
+    color: white !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16pt;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.step-content-large h3 {
+    font-size: 12pt;
+    color: #2D7A6D !important;
+}
+
+.step-content-large p,
+.step-content-large li {
+    font-size: 9pt;
+}
+
+.document-checklist li {
+    font-size: 10pt;
+    padding: 2pt 0;
+}
+
+/* ===================
+   FAQ Page
+   =================== */
+.faq-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8pt;
+}
+
+.faq-item-print {
+    width: calc(50% - 4pt);
+    padding: 8pt;
+    background: #FFFBF7 !important;
+    border-radius: 4pt;
+}
+
+.faq-item-print h4 {
+    font-size: 10pt;
+    color: #2D7A6D !important;
+    margin-bottom: 4pt;
+}
+
+.faq-item-print p {
+    font-size: 9pt;
+    color: #666;
+}
+
+/* ===================
+   Contact Page
+   =================== */
+.contact-large {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10pt;
+    margin-bottom: 15pt;
+}
+
+.contact-section {
+    width: calc(50% - 5pt);
+    padding: 12pt;
+    background: #FFFBF7 !important;
+    border-radius: 6pt;
+    text-align: center;
+}
+
+.contact-section h3 {
+    font-size: 11pt;
+    margin-bottom: 6pt;
+}
+
+.cta-large {
+    text-align: center;
+    padding: 15pt;
+    background: linear-gradient(135deg, #3D9A8B 0%, #2D7A6D 100%) !important;
+    border-radius: 8pt;
+    color: white !important;
+    margin-bottom: 15pt;
+}
+
+.cta-large h3 {
+    color: white !important;
+    font-size: 14pt;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10pt;
+}
+
+.cta-button {
+    padding: 6pt 12pt;
+    background: white !important;
+    color: #2D7A6D !important;
+    border-radius: 4pt;
+    font-weight: 600;
+    font-size: 10pt;
+}
+
+.tagline-large {
+    font-size: 16pt;
+    color: #3D9A8B !important;
+}
+
+/* ===================
+   Back Cover
+   =================== */
+.page-back-cover {
+    background: linear-gradient(135deg, #2D7A6D 0%, #3D9A8B 100%) !important;
+    padding: 40mm 20mm !important;
+    height: 267mm;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center;
+    color: white !important;
+}
+
+.testimonial-text {
+    font-size: 14pt;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.back-programs-list h3 {
+    color: #F4C759 !important;
+    font-size: 11pt;
+    margin-bottom: 10pt;
+}
+
+.back-programs-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5pt;
+}
+
+.back-programs-list li {
+    padding: 4pt 10pt;
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-radius: 4pt;
+    font-size: 9pt;
+}
+
+.back-footer {
+    font-size: 9pt;
+    opacity: 0.7;
+}
+
+/* ===================
+   Utility Print Classes
+   =================== */
+.print-only {
+    display: block !important;
+}
+
+a {
+    color: #3D9A8B !important;
+    text-decoration: none;
+}
+
+/* Remove URLs from printed links */
+a[href]:after {
+    content: none !important;
+}
+

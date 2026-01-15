@@ -1,0 +1,34 @@
+# Image Assets for Digital Booklet
+
+Place your images here. Recommended images:
+
+## Logo & Branding
+- logo.png (recommended: 200x80px, transparent background)
+- logo-white.png (for dark backgrounds)
+
+## Program Icons (optional)
+If you want custom program icons instead of emojis:
+- icon-little-talkers.png
+- icon-ready-set-school.png
+- icon-focus-champions.png
+- icon-social-stars.png
+- icon-learning-launchpad.png
+
+## Team Photos (optional)
+- team-photo.jpg
+- founder-photo.jpg
+
+## Facility Photos (optional)
+- center-exterior.jpg
+- therapy-room.jpg
+- play-area.jpg
+
+## Image Guidelines
+- Format: PNG (with transparency) or JPG
+- Resolution: 72-150 DPI for screen, 300 DPI for print
+- Max file size: 500KB per image for fast loading
+- Color space: sRGB
+
+---
+These images are optional - the booklet works with emoji icons by default.
+
