@@ -1,0 +1,54 @@
+# Images Folder
+
+This folder is for storing website images.
+
+## Recommended Images to Add:
+
+### Logo
+- logo.png (transparent background, approx 200x60px)
+- favicon.ico (32x32px)
+
+### Hero Section
+- hero-image.jpg (family/children learning, 800x600px)
+
+### About Section
+- center-photo.jpg (photo of your home-based center, 600x400px)
+
+### Team Section
+- speech-therapist.jpg (150x150px, circular crop)
+- occupational-therapist.jpg (150x150px, circular crop)
+- special-educator-1.jpg (150x150px, circular crop)
+- special-educator-2.jpg (150x150px, circular crop)
+
+### Testimonials
+- parent-1.jpg (optional, 100x100px)
+- parent-2.jpg (optional, 100x100px)
+- parent-3.jpg (optional, 100x100px)
+
+### General
+- children-learning-1.jpg (activity photos)
+- children-learning-2.jpg (therapy session photos)
+- classroom.jpg (your center's learning space)
+
+## Image Guidelines:
+
+1. Use JPEG for photographs, PNG for logos/graphics
+2. Optimize images for web (compress to reduce file size)
+3. Recommended tools: TinyPNG, Squoosh, ImageOptim
+4. Keep file sizes under 200KB for fast loading
+5. Use descriptive file names for SEO
+
+## Free Stock Photo Sources:
+
+If you need placeholder images:
+- Unsplash (unsplash.com)
+- Pexels (pexels.com)
+- Pixabay (pixabay.com)
+
+Search terms: "child learning", "therapy", "education", "parent child", "special needs education"
+
+## Note:
+
+For privacy, avoid using photos of actual clients without consent.
+Consider using stock photos or illustrations instead.
+
