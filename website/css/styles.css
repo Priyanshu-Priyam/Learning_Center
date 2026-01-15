@@ -7,36 +7,30 @@
    CSS Variables
    =================== */
 :root {
-    /* ===== DARK MODE (Default) ===== */
-    /* Backgrounds - Lighter Emerald for better visibility */
-    --color-bg: #0A1F1A;
-    --color-bg-alt: #0F2A24;
-    --color-glass: rgba(255, 255, 255, 0.04);
-    --color-glass-hover: rgba(255, 255, 255, 0.08);
-    --color-glass-border: rgba(255, 255, 255, 0.12);
+    /* Light-first palette: light greens + white */
+    --color-bg: #F7FBF7;
+    --color-bg-alt: #ECF5EC;
+    --color-glass: rgba(255, 255, 255, 0.7);
+    --color-glass-hover: rgba(255, 255, 255, 0.9);
+    --color-glass-border: rgba(95, 174, 123, 0.25);
     
-    /* Accents - High Voltage Neon */
-    --color-accent-primary: #CCFF00; /* Neon Lime */
-    --color-accent-secondary: #00F0FF; /* Electric Teal */
-    --color-accent-tertiary: #FF6B6B; /* Coral for specific highlights */
+    --color-accent-primary: #5FAE7B; /* soft green */
+    --color-accent-secondary: #83C7A1; /* lighter green */
+    --color-accent-tertiary: #A6DAB8; /* pale green */
     
-    /* Text Colors */
-    --color-text: #FFFFFF;
-    --color-text-muted: #B0C4BF;
-    --color-text-dark: #0A1F1A; /* For text on neon backgrounds */
+    --color-text: #1F3526; /* readable dark green */
+    --color-text-muted: #4D6A58;
+    --color-text-dark: #FFFFFF;
     
-    /* Gradients */
-    --gradient-glow: radial-gradient(circle, rgba(204, 255, 0, 0.15) 0%, transparent 70%);
-    --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
+    --gradient-glow: radial-gradient(circle, rgba(95, 174, 123, 0.12) 0%, transparent 70%);
+    --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
     
-    /* Typography */
     --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
     --font-hand: 'Patrick Hand', cursive;
     --font-serif: 'Libre Baskerville', Georgia, serif;
     
-    /* Spacing */
     --space-xs: 0.25rem;
     --space-sm: 0.5rem;
     --space-md: 1rem;
@@ -46,57 +40,23 @@
     --space-3xl: 4rem;
     --space-4xl: 6rem;
     
-    /* Border Radius */
     --radius-sm: 8px;
     --radius-md: 12px;
     --radius-lg: 20px;
     --radius-xl: 28px;
     --radius-full: 50%;
     
-    /* Effects */
-    --shadow-glow: 0 0 25px rgba(204, 255, 0, 0.25);
-    --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.25);
+    --shadow-glow: 0 0 25px rgba(95, 174, 123, 0.25);
+    --shadow-glass: 0 8px 32px rgba(31, 53, 38, 0.08);
     --blur-strong: blur(20px);
     --blur-light: blur(10px);
     
-    /* Transitions */
     --transition-fast: 0.15s ease;
     --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     
-    /* Container */
     --container-max: 1200px;
     --container-padding: 1.5rem;
-}
-
-/* ===== LIGHT MODE ===== */
-@media (prefers-color-scheme: light) {
-    :root {
-        /* Backgrounds - Clean white/gray */
-        --color-bg: #FAFBFA;
-        --color-bg-alt: #F0F4F2;
-        --color-glass: rgba(0, 0, 0, 0.03);
-        --color-glass-hover: rgba(0, 0, 0, 0.06);
-        --color-glass-border: rgba(0, 0, 0, 0.08);
-        
-        /* Accents - Deeper for contrast on light */
-        --color-accent-primary: #2D8B4E; /* Forest Green */
-        --color-accent-secondary: #0891B2; /* Cyan */
-        --color-accent-tertiary: #DC2626; /* Red for alerts */
-        
-        /* Text Colors */
-        --color-text: #1A1A1A;
-        --color-text-muted: #5A6B66;
-        --color-text-dark: #FFFFFF;
-        
-        /* Gradients */
-        --gradient-glow: radial-gradient(circle, rgba(45, 139, 78, 0.1) 0%, transparent 70%);
-        --gradient-glass: linear-gradient(135deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.01) 100%);
-        
-        /* Effects */
-        --shadow-glow: 0 0 25px rgba(45, 139, 78, 0.2);
-        --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.08);
-    }
 }
 
 /* ===================
@@ -122,8 +82,8 @@ body {
     background-color: var(--color-bg);
     overflow-x: hidden;
     background-image: 
-        radial-gradient(circle at 20% 50%, rgba(204, 255, 0, 0.04) 0%, transparent 30%),
-        radial-gradient(circle at 80% 30%, rgba(0, 240, 255, 0.04) 0%, transparent 30%);
+        radial-gradient(circle at 20% 50%, rgba(95, 174, 123, 0.08) 0%, transparent 35%),
+        radial-gradient(circle at 80% 30%, rgba(166, 218, 184, 0.25) 0%, transparent 35%);
 }
 
 /* Grid Overlay Background */
@@ -135,9 +95,9 @@ body {
     width: 100%;
     height: 100%;
     background-image: 
-        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-    background-size: 60px 60px;
+        linear-gradient(rgba(31, 53, 38, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(31, 53, 38, 0.04) 1px, transparent 1px);
+    background-size: 70px 70px;
     pointer-events: none;
     z-index: 0;
 }
@@ -254,10 +214,11 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 1000;
     border-radius: var(--radius-lg);
     padding: 0.75rem 1.5rem;
-    background: rgba(10, 35, 28, 0.85);
+    background: rgba(255, 255, 255, 0.92);
     backdrop-filter: var(--blur-strong);
     -webkit-backdrop-filter: var(--blur-strong);
     border: 1px solid var(--color-glass-border);
+    box-shadow: 0 10px 30px rgba(31, 53, 38, 0.08);
     transition: all var(--transition-base);
 }
 
@@ -294,14 +255,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo-accent {
-    font-size: 0.7rem;
     color: var(--color-accent-primary);
-    font-weight: 500;
 }
 
 .nav-menu {
     display: flex;
-    gap: 1.5rem;
+    gap: 1.25rem;
     list-style: none;
     align-items: center;
     margin: 0;
@@ -311,9 +270,9 @@ h1, h2, h3, h4, h5, h6 {
 .nav-link {
     color: var(--color-text);
     text-decoration: none;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-family: var(--font-body);
-    font-weight: 500;
+    font-weight: 600;
     transition: color var(--transition-fast);
     white-space: nowrap;
 }
@@ -325,13 +284,14 @@ h1, h2, h3, h4, h5, h6 {
 .nav-cta {
     color: var(--color-text-dark);
     background: var(--color-accent-primary);
-    padding: 0.5rem 1rem;
-    border-radius: var(--radius-sm);
-    font-weight: 600;
+    padding: 0.55rem 1.1rem;
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    box-shadow: var(--shadow-glow);
 }
 
 .nav-cta:hover {
-    background: #b8e600;
+    background: #78c995;
     box-shadow: var(--shadow-glow);
 }
 
@@ -460,14 +420,15 @@ h1, h2, h3, h4, h5, h6 {
     padding: var(--space-xl);
     max-width: 650px;
     width: 100%;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--color-glass-border);
+    background: var(--color-glass);
     border-radius: var(--radius-lg);
+    box-shadow: 0 20px 40px rgba(31, 53, 38, 0.08);
 }
 
 .hero-subtitle {
     font-size: 1rem;
-    color: var(--color-text-muted);
+    color: var(--color-text);
     margin-bottom: var(--space-lg);
     line-height: 1.6;
 }
