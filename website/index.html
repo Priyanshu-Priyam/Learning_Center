@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Libre+Baskerville:wght@700&family=Patrick+Hand&display=swap" rel="stylesheet">
     
     <!-- Styles -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css?v=4">
 </head>
 <body class="tech-theme">
     <!-- Navigation -->
@@ -64,9 +64,8 @@
                         Gorakhpur's first advanced learning center for neurodiverse children.
                     </p>
                     <div class="hero-cta">
-                        <a href="https://wa.me/919999999999?text=Hi,%20I%20would%20like%20to%20book%20a%20free%20consultation." class="btn btn-primary btn-glow" target="_blank">
-                            <span class="btn-icon">⚡</span>
-                            Book Free Consultation
+                        <a href="https://wa.me/919839187883?text=Hi,%20I%20would%20like%20to%20book%20a%20free%20consultation." class="btn btn-primary btn-glow btn-whatsapp-hero" target="_blank">
+                            <img src="images/whatsapp-icon.svg" alt="" class="whatsapp-svg-icon"> Book Free Consultation
                         </a>
                         <a href="/booklet/index.html" class="btn btn-glass" target="_blank">
                             <span class="btn-icon">📋</span>
@@ -298,8 +297,8 @@
             <div class="programs-note">
                 <p>💡 <strong>Not sure which program is right?</strong> Book a free consultation and our experts will recommend the best fit for your child.</p>
                 <div class="mobile-only" style="margin-top: 1rem;">
-                    <a href="https://wa.me/919999999999?text=Hi,%20I%27m%20not%20sure%20which%20program%20is%20right%20for%20my%20child." class="btn btn-primary" target="_blank">
-                        <span class="btn-icon">💬</span> Chat on WhatsApp
+                    <a href="https://wa.me/919839187883?text=Hi,%20I%27m%20not%20sure%20which%20program%20is%20right%20for%20my%20child." class="btn btn-primary btn-whatsapp-inviting" target="_blank">
+                        <img src="images/whatsapp-icon.svg" alt="" class="whatsapp-svg-icon"> Chat on WhatsApp
                     </a>
                 </div>
             </div>
@@ -358,9 +357,8 @@
             <div class="cta-box">
                 <h3>Ready to take the first step?</h3>
                 <p>Book a free 30-minute consultation today.</p>
-                <a href="https://wa.me/919999999999?text=Hi,%20I%20would%20like%20to%20book%20a%20free%20consultation%20for%20my%20child." class="btn btn-primary" target="_blank">
-                    <span class="btn-icon">💬</span>
-                    WhatsApp Us Now
+                <a href="https://wa.me/919839187883?text=Hi,%20I%20would%20like%20to%20book%20a%20free%20consultation%20for%20my%20child." class="btn btn-primary btn-whatsapp-inviting" target="_blank">
+                    <img src="images/whatsapp-icon.svg" alt="" class="whatsapp-svg-icon"> WhatsApp Us Now
                 </a>
             </div>
         </div>
@@ -496,7 +494,7 @@
                             <span class="btn-icon">👁️</span>
                             View Booklet
                         </a>
-                        <button class="btn btn-outline" onclick="window.open('/booklet/index.html', '_blank'); setTimeout(() => alert('Click the \"📄 Save as PDF\" button in the booklet to download'), 1000)">
+                        <button class="btn btn-outline" onclick="window.open('/booklet/index.html', '_blank'); setTimeout(function() { alert('Click the 📄 Save as PDF button in the booklet to download'); }, 1000)">
                             <span class="btn-icon">💾</span>
                             Download PDF
                         </button>
@@ -634,47 +632,67 @@
             </div>
 
             <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-card">
-                        <div class="contact-icon">📍</div>
+                <!-- Primary Action Buttons -->
+                <div class="contact-primary-actions">
+                    <a href="https://wa.me/919839187883?text=Hi,%20I%20would%20like%20to%20book%20a%20free%20consultation%20for%20my%20child." class="contact-primary-btn whatsapp-primary" target="_blank">
+                        <div class="btn-icon-wrapper">
+                            <img src="images/whatsapp-icon.svg" alt="WhatsApp" class="whatsapp-icon-large">
+                        </div>
+                        <div class="btn-content">
+                            <strong>Chat on WhatsApp</strong>
+                            <span>Get instant response • Free consultation</span>
+                        </div>
+                        <div class="btn-arrow">→</div>
+                    </a>
+                    <a href="tel:+919839187883" class="contact-primary-btn phone-primary">
+                        <div class="btn-icon-wrapper">
+                            <span class="phone-icon-large">📞</span>
+                        </div>
+                        <div class="btn-content">
+                            <strong>Call Us Now</strong>
+                            <span>+91 98391 87883 • Mon-Sat, 9 AM - 5 PM</span>
+                        </div>
+                        <div class="btn-arrow">→</div>
+                    </a>
+                </div>
+
+                <!-- Contact Information Cards -->
+                <div class="contact-info-grid">
+                    <div class="contact-info-card glass-card">
+                        <div class="contact-icon-wrapper">
+                            <div class="contact-icon-bg location">📍</div>
+                        </div>
                         <h3>Visit Us</h3>
                         <p>Bright Horizon Learning Center<br>
-                        [Your Address]<br>
                         Gorakhpur, Uttar Pradesh</p>
+                        <a href="#" class="contact-link">Get Directions →</a>
                     </div>
 
-                    <div class="contact-card">
-                        <div class="contact-icon">📞</div>
+                    <div class="contact-info-card glass-card">
+                        <div class="contact-icon-wrapper">
+                            <div class="contact-icon-bg phone">📞</div>
+                        </div>
                         <h3>Call Us</h3>
-                        <p><a href="tel:+919999999999">+91 99999 99999</a></p>
+                        <p><a href="tel:+919839187883" class="contact-link-large">+91 98391 87883</a></p>
                         <p class="contact-note">Mon-Sat, 9:00 AM - 5:00 PM</p>
                     </div>
 
-                    <div class="contact-card">
-                        <div class="contact-icon">✉️</div>
+                    <div class="contact-info-card glass-card">
+                        <div class="contact-icon-wrapper">
+                            <div class="contact-icon-bg email">✉️</div>
+                        </div>
                         <h3>Email Us</h3>
-                        <p><a href="mailto:hello@brighthorizonlearning.com">hello@brighthorizonlearning.com</a></p>
+                        <p><a href="mailto:hello@brighthorizonlearning.com" class="contact-link-large">hello@brighthorizonlearning.com</a></p>
+                        <a href="mailto:hello@brighthorizonlearning.com" class="contact-link">Send Email →</a>
                     </div>
                 </div>
 
-                <div class="contact-actions">
-                    <a href="https://wa.me/919999999999?text=Hi,%20I%20would%20like%20to%20book%20a%20free%20consultation%20for%20my%20child." class="contact-btn whatsapp" target="_blank">
-                        <span class="btn-icon">💬</span>
-                        <span class="btn-text">
-                            <strong>WhatsApp Us</strong>
-                            <small>Quick response guaranteed</small>
-                        </span>
-                    </a>
-                    <a href="tel:+919999999999" class="contact-btn phone">
-                        <span class="btn-icon">📞</span>
-                        <span class="btn-text">
-                            <strong>Call Now</strong>
-                            <small>+91 99999 99999</small>
-                        </span>
-                    </a>
-                </div>
-
-                <div class="map-container">
+                <!-- Map Section -->
+                <div class="map-container glass-card">
+                    <div class="map-header">
+                        <h3>📍 Find Us</h3>
+                        <p>Visit our center in Gorakhpur</p>
+                    </div>
                     <div class="map-placeholder">
                         <div class="placeholder-icon">🗺️</div>
                         <p>Google Maps will be embedded here</p>
@@ -722,7 +740,7 @@
                     <div class="footer-column">
                         <h4>Contact</h4>
                         <ul>
-                            <li><a href="tel:+919999999999">+91 99999 99999</a></li>
+                            <li><a href="tel:+919839187883">+91 98391 87883</a></li>
                             <li><a href="mailto:hello@brighthorizonlearning.com">hello@brighthorizonlearning.com</a></li>
                             <li>Gorakhpur, UP</li>
                         </ul>
@@ -796,8 +814,8 @@
                 </div>
                 <div class="modal-section modal-cta">
                     <p><strong>4-5 sessions/week</strong> | <strong>₹8,000-10,000/month</strong></p>
-                    <a href="https://wa.me/919999999999?text=Hi,%20I%20am%20interested%20in%20the%20Little%20Talkers%20program." class="btn btn-primary" target="_blank">
-                        Inquire About This Program
+                    <a href="https://wa.me/919839187883?text=Hi,%20I%20am%20interested%20in%20the%20Little%20Talkers%20program." class="btn btn-primary btn-whatsapp-inviting" target="_blank">
+                        <img src="images/whatsapp-icon.svg" alt="" class="whatsapp-svg-icon"> Inquire About This Program
                     </a>
                 </div>
             </div>
@@ -862,8 +880,8 @@
                 </div>
                 <div class="modal-section modal-cta">
                     <p><strong>5 sessions/week</strong> | <strong>₹10,000-12,000/month</strong></p>
-                    <a href="https://wa.me/919999999999?text=Hi,%20I%20am%20interested%20in%20the%20Ready%20Set%20School%20program." class="btn btn-primary" target="_blank">
-                        Inquire About This Program
+                    <a href="https://wa.me/919839187883?text=Hi,%20I%20am%20interested%20in%20the%20Ready%20Set%20School%20program." class="btn btn-primary btn-whatsapp-inviting" target="_blank">
+                        <img src="images/whatsapp-icon.svg" alt="" class="whatsapp-svg-icon"> Inquire About This Program
                     </a>
                 </div>
             </div>
@@ -928,8 +946,8 @@
                 </div>
                 <div class="modal-section modal-cta">
                     <p><strong>4-5 sessions/week</strong> | <strong>₹8,000-10,000/month</strong></p>
-                    <a href="https://wa.me/919999999999?text=Hi,%20I%20am%20interested%20in%20the%20Focus%20Champions%20program." class="btn btn-primary" target="_blank">
-                        Inquire About This Program
+                    <a href="https://wa.me/919839187883?text=Hi,%20I%20am%20interested%20in%20the%20Focus%20Champions%20program." class="btn btn-primary btn-whatsapp-inviting" target="_blank">
+                        <img src="images/whatsapp-icon.svg" alt="" class="whatsapp-svg-icon"> Inquire About This Program
                     </a>
                 </div>
             </div>
@@ -994,8 +1012,8 @@
                 </div>
                 <div class="modal-section modal-cta">
                     <p><strong>5 sessions/week</strong> | <strong>₹10,000-12,000/month</strong></p>
-                    <a href="https://wa.me/919999999999?text=Hi,%20I%20am%20interested%20in%20the%20Social%20Stars%20program." class="btn btn-primary" target="_blank">
-                        Inquire About This Program
+                    <a href="https://wa.me/919839187883?text=Hi,%20I%20am%20interested%20in%20the%20Social%20Stars%20program." class="btn btn-primary btn-whatsapp-inviting" target="_blank">
+                        <img src="images/whatsapp-icon.svg" alt="" class="whatsapp-svg-icon"> Inquire About This Program
                     </a>
                 </div>
             </div>
@@ -1060,8 +1078,8 @@
                 </div>
                 <div class="modal-section modal-cta">
                     <p><strong>4 sessions/week</strong> | <strong>₹7,000-9,000/month</strong></p>
-                    <a href="https://wa.me/919999999999?text=Hi,%20I%20am%20interested%20in%20the%20Learning%20Launchpad%20program." class="btn btn-primary" target="_blank">
-                        Inquire About This Program
+                    <a href="https://wa.me/919839187883?text=Hi,%20I%20am%20interested%20in%20the%20Learning%20Launchpad%20program." class="btn btn-primary btn-whatsapp-inviting" target="_blank">
+                        <img src="images/whatsapp-icon.svg" alt="" class="whatsapp-svg-icon"> Inquire About This Program
                     </a>
                 </div>
             </div>
@@ -1069,8 +1087,8 @@
     </div>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/919999999999?text=Hi,%20I%20would%20like%20to%20know%20more%20about%20your%20programs." class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-        <span class="whatsapp-icon">💬</span>
+    <a href="https://wa.me/919839187883?text=Hi,%20I%20would%20like%20to%20know%20more%20about%20your%20programs." class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <img src="images/whatsapp-icon.svg" alt="WhatsApp" class="whatsapp-svg-icon" style="width: 24px; height: 24px;">
         <span class="whatsapp-text">Chat with us</span>
     </a>
 
@@ -1084,8 +1102,8 @@
             <span class="mobile-nav-icon">📚</span>
             <span class="mobile-nav-label">Programs</span>
         </a>
-        <a href="https://wa.me/919999999999" class="mobile-nav-item mobile-nav-cta" target="_blank">
-            <span class="mobile-nav-icon">💬</span>
+        <a href="https://wa.me/919839187883" class="mobile-nav-item mobile-nav-cta" target="_blank">
+            <img src="images/whatsapp-icon.svg" alt="" class="mobile-nav-icon" style="width: 20px; height: 20px; filter: brightness(0) invert(1);">
             <span class="mobile-nav-label">Chat</span>
         </a>
         <a href="#contact" class="mobile-nav-item">
