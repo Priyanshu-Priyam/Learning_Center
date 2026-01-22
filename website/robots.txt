@@ -1,0 +1,25 @@
+# Robots.txt for Bright Horizon Learning Center
+# https://brighthorizongorakhpur.com
+
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://brighthorizongorakhpur.com/website/sitemap.xml
+
+# Allow Googlebot specifically
+User-agent: Googlebot
+Allow: /
+
+# Allow Bingbot specifically
+User-agent: Bingbot
+Allow: /
+
+# Disallow admin or private areas (if any exist in future)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Crawl delay (optional - be nice to servers)
+# Crawl-delay: 1
+

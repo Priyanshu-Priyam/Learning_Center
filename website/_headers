@@ -1,0 +1,50 @@
+# Netlify Headers Configuration for SEO & Performance
+# https://docs.netlify.com/routing/headers/
+
+# Apply to all pages
+/*
+  # Security Headers
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  
+  # Cache Control for HTML pages (short cache for fresh content)
+  Cache-Control: public, max-age=0, must-revalidate
+
+# CSS files - cache for 1 year (use versioned URLs)
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# JavaScript files - cache for 1 year (use versioned URLs)
+/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Images - cache for 1 year
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+  
+# Fonts - cache for 1 year
+/*.woff
+  Cache-Control: public, max-age=31536000, immutable
+  
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+
+# Static assets
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.jpeg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+

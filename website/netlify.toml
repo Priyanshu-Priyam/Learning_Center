@@ -1,0 +1,97 @@
+# Netlify Configuration for Bright Horizon Learning Center
+# Domain: brighthorizongorakhpur.com
+# Optimized for SEO and Performance
+
+[build]
+  publish = "."
+
+# Force HTTPS redirect
+[[redirects]]
+  from = "http://brighthorizongorakhpur.com/*"
+  to = "https://brighthorizongorakhpur.com/:splat"
+  status = 301
+  force = true
+
+# WWW to non-WWW redirect
+[[redirects]]
+  from = "https://www.brighthorizongorakhpur.com/*"
+  to = "https://brighthorizongorakhpur.com/:splat"
+  status = 301
+  force = true
+
+# Redirects for clean URLs
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+# Handle 404 errors
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
+
+# Enable asset optimization
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
+
+[build.processing.html]
+  pretty_urls = true
+
+[build.processing.images]
+  compress = true
+
+# Headers for all pages
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Long cache for static assets
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
